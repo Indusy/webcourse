@@ -138,6 +138,11 @@ header {
   width: 420px;
 }
 
+#hom {
+  animation: typing 3s steps(8) alternate, flashing 0.7s steps(1) infinite;
+  width: 480px;
+}
+
 .showpanel {
   width: 100%;
   clear: both;
@@ -311,6 +316,42 @@ aside + * + footer {
   }
 }
 
+.coverscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.98);
+  background-image: url(../images/2333b0e83d7a6031ee7023b656971634.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 5;
+  animation: desa 2s linear forwards;
+}
+
+.tictactoe {
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.chessblock:nth-of-type(2n-1) {
+  background-color: #344c67;
+}
+
+.chessblock:nth-of-type(2n-2) {
+  background-color: #ca872f;
+}
+
+
+
+
+
+
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -383,4 +424,18 @@ aside + * + footer {
   50% {
     right: 120px;
   }
+}
+
+@keyframes desa {
+  from {
+    
+  }
+  to {
+    // opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes deeper {
+  
 }
