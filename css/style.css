@@ -145,10 +145,17 @@ header {
   font-size: 100px;
 }
 
+#ind,
 #bio {
   -webkit-animation: typing 3s steps(9) alternate, flashing 0.7s steps(1) infinite;
           animation: typing 3s steps(9) alternate, flashing 0.7s steps(1) infinite;
   width: 540px;
+}
+
+#hob {
+  -webkit-animation: typing 3s steps(7) alternate, flashing 0.7s steps(1) infinite;
+          animation: typing 3s steps(7) alternate, flashing 0.7s steps(1) infinite;
+  width: 420px;
 }
 
 .showpanel {

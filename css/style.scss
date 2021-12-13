@@ -127,23 +127,15 @@ header {
   }
 }
 
-#bio {// .container::before {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   display: block;
-  //   content: '';
-  //   width: 100vw;
-  //   height: 100vh;
-  //   background-image: url('../images/kirby.jpg');
-  //   background-size: cover;
-  //   background-attachment: fixed;
-  //   background-position: center;
-  //   opacity: .5;
-  //   filter: blur(10px);
-  // }
+#ind,
+#bio {
   animation: typing 3s steps(9) alternate, flashing 0.7s steps(1) infinite;
   width: 540px;
+}
+
+#hob {
+  animation: typing 3s steps(7) alternate, flashing 0.7s steps(1) infinite;
+  width: 420px;
 }
 
 .showpanel {
