@@ -16,12 +16,26 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body > .container {
   background-color: #ffd0d0;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+}
+
+.container.th2 {
+  background-color: unset;
+  background-image: radial-gradient(closest-side, #ff5555, rgba(255, 0, 21, 0)), radial-gradient(closest-side, #c4ff3a, rgba(0, 168, 8, 0)), radial-gradient(closest-side, #ffd54c, rgba(255, 174, 0, 0)), radial-gradient(closest-side, #48b6ff, rgba(0, 81, 255, 0)), radial-gradient(closest-side, #d477ff, rgba(195, 0, 255, 0));
+  background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: -80vmax -80vmax, 60vmax 50vmax, 10vmax 10vmax, -30vmax -30vmax, 50vmax -50vmax;
+  -webkit-animation: gradient 10s ease-in-out infinite;
+          animation: gradient 10s ease-in-out infinite;
+}
+
+.trsp {
+  background: unset;
 }
 
 #themecheck:checked + .container {
@@ -355,8 +369,8 @@ aside + * + footer {
   background-size: cover;
   background-attachment: fixed;
   z-index: 5;
-  -webkit-animation: desa 2s linear forwards;
-          animation: desa 2s linear forwards;
+  -webkit-animation: desa 2s 1s linear forwards;
+          animation: desa 2s 1s linear forwards;
 }
 
 .tictactoe {
@@ -492,7 +506,8 @@ aside + * + footer {
 }
 
 @-webkit-keyframes mov {
-  from, to {
+  from,
+  to {
     right: 110px;
   }
   50% {
@@ -501,7 +516,8 @@ aside + * + footer {
 }
 
 @keyframes mov {
-  from, to {
+  from,
+  to {
     right: 110px;
   }
   50% {
@@ -527,5 +543,23 @@ aside + * + footer {
 
 @-webkit-keyframes deeper {}
 
-@keyframes deeper {}
+@keyframes deeper {}@-webkit-keyframes gradient {
+  from, to {
+    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+    background-position: -80vmax -80vmax, 60vmax 50vmax, 10vmax 10vmax, -30vmax -30vmax, 50vmax -50vmax;
+  }
+  25% {
+    background-size: 100vmax 130vmax, 100vmax 50vmax, 60vmax 100vmax, 80vmax 130vmax, 80vmax 120vmax;
+    background-position: -60vmax -70vmax, 50vmax 70vmax, 20vmax 0vmax, -40vmax -40vmax, 30vmax -60vmax;
+  }
+}@keyframes gradient {
+  from, to {
+    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+    background-position: -80vmax -80vmax, 60vmax 50vmax, 10vmax 10vmax, -30vmax -30vmax, 50vmax -50vmax;
+  }
+  25% {
+    background-size: 100vmax 130vmax, 100vmax 50vmax, 60vmax 100vmax, 80vmax 130vmax, 80vmax 120vmax;
+    background-position: -60vmax -70vmax, 50vmax 70vmax, 20vmax 0vmax, -40vmax -40vmax, 30vmax -60vmax;
+  }
+}
 /*# sourceMappingURL=style.css.map */

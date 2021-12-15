@@ -15,12 +15,36 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body > .container {
   background-color: #ffd0d0;
   // height: 100%;
-  transition: all 2s;
+}
+
+.container.th2 {
+  background-color: unset;
+  background-image: radial-gradient(
+      closest-side,
+      rgb(255, 85, 85),
+      rgba(255, 0, 21, 0)
+    ),
+    radial-gradient(closest-side, rgb(196, 255, 58), rgba(0, 168, 8, 0)),
+    radial-gradient(closest-side, rgb(255, 213, 76), rgba(255, 174, 0, 0)),
+    radial-gradient(closest-side, rgb(72, 182, 255), rgba(0, 81, 255, 0)),
+    radial-gradient(closest-side, rgb(212, 119, 255), rgba(195, 0, 255, 0));
+  background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax,
+    110vmax 110vmax, 90vmax 90vmax;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: -80vmax -80vmax, 60vmax 50vmax, 10vmax 10vmax,
+    -30vmax -30vmax, 50vmax -50vmax;
+  animation: gradient 10s ease-in-out infinite;
+}
+
+.trsp {
+  background: unset;
 }
 
 #themecheck:checked {
@@ -327,7 +351,7 @@ aside + * + footer {
   background-size: cover;
   background-attachment: fixed;
   z-index: 5;
-  animation: desa 2s linear forwards;
+  animation: desa 2s 1s linear forwards;
 }
 
 .tictactoe {
@@ -345,12 +369,6 @@ aside + * + footer {
 .chessblock:nth-of-type(2n-2) {
   background-color: #ca872f;
 }
-
-
-
-
-
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -417,7 +435,8 @@ aside + * + footer {
 }
 
 @keyframes mov {
-  from,to {
+  from,
+  to {
     right: 110px;
   }
 
@@ -428,7 +447,6 @@ aside + * + footer {
 
 @keyframes desa {
   from {
-    
   }
   to {
     // opacity: 0;
@@ -437,5 +455,20 @@ aside + * + footer {
 }
 
 @keyframes deeper {
-  
+}
+
+@keyframes gradient {
+  from,to {
+    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax,
+      110vmax 110vmax, 90vmax 90vmax;
+    background-position: -80vmax -80vmax, 60vmax 50vmax, 10vmax 10vmax,
+      -30vmax -30vmax, 50vmax -50vmax;
+  }
+
+  25% {
+    background-size: 100vmax 130vmax, 100vmax 50vmax, 60vmax 100vmax,
+      80vmax 130vmax, 80vmax 120vmax;
+    background-position: -60vmax -70vmax, 50vmax 70vmax, 20vmax 0vmax,
+      -40vmax -40vmax, 30vmax -60vmax;
+  }
 }
